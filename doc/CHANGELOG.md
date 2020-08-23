@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**  *generated with [DocToc](https://hub.fastgit.org//thlorenz/doctoc)*
 
 - [Changelog](#changelog)
 
@@ -13,13 +13,13 @@ All notable changes to this project will be documented in this file.
   - A few tips for the project rename following the field reports (the issues created
     by users):
     - the `ZPLGM` hash is now `ZINIT`,
-    - the annexes are moved under [zinit-zsh](https://github.com/zinit-zsh)
+    - the annexes are moved under [zinit-zsh](https://hub.fastgit.org//zinit-zsh)
       organization (it needs a logo, could you create one, if you're skilled in
       graphics?).
 
 * 19-01-2020
   - The name has been changed to **Zinit** based on the results of the
-    [poll](https://github.com/zdharma/zinit/issues/235).
+    [poll](https://hub.fastgit.org//zdharma/zinit/issues/235).
   - In general, you don't have to do anything after the name change.
   - Only a run of `zinit update --all` might be necessary.
   - You might also want to rename your `zplugin` calls in `zshrc` to `zinit`.
@@ -30,7 +30,7 @@ All notable changes to this project will be documented in this file.
   - There's a new function, `zpextract`, which unpacks the given file. It supports many
     formats (notably also `dmg` images) – if there's a format that's unsupported please
     don't hesitate to [make a
-    request](https://github.com/zdharma/zinit/issues/new?template=feature_request.md)
+    request](https://hub.fastgit.org//zdharma/zinit/issues/new?template=feature_request.md)
     for it to be added. A few facts:
     - the function is available only at the time of the plugin/snippet installation,
     - it's to be used within `atclone` and `atpull` ices,
@@ -39,7 +39,7 @@ All notable changes to this project will be documented in this file.
     - one other option `--norm` prevents the archive from being deleted upon unpacking.
   - snippets now aren't re-downloaded unless they're newer on the HTTP server; use
     this with the `--norm` option of `zpextract` to prevent unnecessary updates; for
-    example, the [firefox-dev package](https://github.com/Zsh-Packages/firefox-dev)
+    example, the [firefox-dev package](https://hub.fastgit.org//Zsh-Packages/firefox-dev)
     uses this option for this purpose,
   - GitHub doesn't report proper `Last-Modified` HTTP server for the files in the
     repositories so the feature doesn't yet work with such files.
@@ -48,8 +48,8 @@ All notable changes to this project will be documented in this file.
   - The packages have been disconnected from NPM registry and now live only on Zsh
     Packages organization. Publishing to NPM isn't needed.
   - There are two interesting packages,
-    [any-gem](https://github.com/Zsh-Packages/any-gem) and
-    [any-node](https://github.com/Zsh-Packages/any-node). They allow to install any
+    [any-gem](https://hub.fastgit.org//Zsh-Packages/any-gem) and
+    [any-node](https://hub.fastgit.org//Zsh-Packages/any-node). They allow to install any
     Gem(s) or Node module(s) locally in a newly created plugin directory. For example:
 
     ```zsh
@@ -62,7 +62,7 @@ All notable changes to this project will be documented in this file.
     ```
 
     The binaries will be exposed without altering the PATH via shims
-    ([Bin-Gem-Node](https://github.com/zinit-zsh/z-a-bin-gem-node) annex is needed).
+    ([Bin-Gem-Node](https://hub.fastgit.org//zinit-zsh/z-a-bin-gem-node) annex is needed).
     Shims are correctly removed when deleting a plugin with `zinit delete …`.
 
 * 11-12-2019
@@ -96,7 +96,7 @@ All notable changes to this project will be documented in this file.
     ```
 
     i.e.: precede the plugin name with `@`. Note: `sbin''` is an ice added by the
-    [z-a-bin-gem-node](https://github.com/zinit/z-a-bin-gem-node) annex, it provides
+    [z-a-bin-gem-node](https://hub.fastgit.org//zinit/z-a-bin-gem-node) annex, it provides
     the command to the command line without altering `$PATH`.
 
     See the [Zinit Wiki](http://zdharma.org/zinit/wiki/For-Syntax/) for more
@@ -184,7 +184,7 @@ All notable changes to this project will be documented in this file.
 * 14-09-2019
   - There's a Vim plugin which extends syntax highlighting of zsh scripts with coloring
     of the Zinit commands. [Project
-    homepage](https://github.com/zinit/zinit-vim-syntax).
+    homepage](https://hub.fastgit.org//zinit/zinit-vim-syntax).
 
 * 13-09-2019
   - New ice `aliases` which loads plugin with the aliases mechanism enabled. Use for
@@ -216,18 +216,18 @@ All notable changes to this project will be documented in this file.
   - Three new Zplugin annexes (i.e.
     [extensions](http://zdharma.org/zplugin/wiki/Annexes/)):
 
-      - [z-a-man](https://github.com/zplugin/z-a-man)
+      - [z-a-man](https://hub.fastgit.org//zplugin/z-a-man)
 
         Generates man pages and code-documentation man pages from plugin's README.md
         and source files (the code documentation is obtained from
-        [Zshelldoc](https://github.com/zdharma/zshelldoc)).
+        [Zshelldoc](https://hub.fastgit.org//zdharma/zshelldoc)).
 
-      - [z-a-test](https://github.com/zplugin/z-a-test)
+      - [z-a-test](https://hub.fastgit.org//zplugin/z-a-test)
 
         Runs tests (if detected `test' target in a `Makefile` or any `*.zunit` files)
         on plugin installation and non-empty update.
 
-      - [z-a-patch-dl](https://github.com/zplugin/z-a-patch-dl)
+      - [z-a-patch-dl](https://hub.fastgit.org//zplugin/z-a-patch-dl)
 
         Allows easy download and applying of patches, to e.g. aid building a binary
         program equipped in the plugin.
@@ -254,7 +254,7 @@ All notable changes to this project will be documented in this file.
 * 09-07-2019
   - Zplugin can now have **its own plugins**, called **z-plugins**! Check out an
     example but fully functional z-plugin
-    [zdharma/z-p-submods](https://github.com/zdharma/z-p-submods) and a document that
+    [zdharma/z-p-submods](https://hub.fastgit.org//zdharma/z-p-submods) and a document that
     explains on how to implement your own z-plugin
     ([here](../../wiki/Z-PLUGINS)).
 
@@ -369,7 +369,7 @@ All notable changes to this project will be documented in this file.
     files:
     ```zsh
     zplugin ice as"completion" mv"hub* -> _hub"
-    zplugin snippet https://github.com/github/hub/blob/master/etc/hub.zsh_completion
+    zplugin snippet https://hub.fastgit.org//github/hub/blob/master/etc/hub.zsh_completion
     ```
 
   - Uplift of Git-output, it now has an animated progress-bar:
@@ -427,7 +427,7 @@ All notable changes to this project will be documented in this file.
 
 * 05-02-2018
   - I work much on this README however multi-file Wiki might be better to read – it
-    [just has been created](https://github.com/zdharma/zplugin/wiki).
+    [just has been created](https://hub.fastgit.org//zdharma/zplugin/wiki).
 
 * 16-01-2018
   - New ice-mod `compile` which takes pattern to select additional files to compile, e.g.
@@ -448,7 +448,7 @@ All notable changes to this project will be documented in this file.
 
 * 31-12-2017
   - For the new year there's a new feature: user-services spawned by Zshell :) Check out
-    [available services](https://github.com/zservices). They are configured like their
+    [available services](https://hub.fastgit.org//zservices). They are configured like their
     READMEs say, and controlled via:
 
     ```
@@ -461,10 +461,10 @@ All notable changes to this project will be documented in this file.
 
     This feature allows to configure everything in `.zshrc`, without the the need to deal with `systemd` or
     `launchd`, and can be useful e.g. to configure shared-variables (across Zshells), stored in `redis` database
-    (details on [zservices/redis](https://github.com/zservices/redis)).
+    (details on [zservices/redis](https://hub.fastgit.org//zservices/redis)).
 
 * 24-12-2017
-  - Xmas present – [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
+  - Xmas present – [fast-syntax-highlighting](https://hub.fastgit.org//zdharma/fast-syntax-highlighting)
     now highlights the quoted part in `atinit"echo Initializing"`, i.e. it supports ICE syntax :)
 
 * 08-12-2017
@@ -483,7 +483,7 @@ All notable changes to this project will be documented in this file.
     [full story](#automatic-loadunload-on-condition) and [Asciinema video](https://asciinema.org/a/150825).
 
 * 29-11-2017
-  - **[Turbo Mode](https://github.com/zdharma/zplugin#turbo-mode-zsh--53)** – **39-50% or more faster Zsh startup!**
+  - **[Turbo Mode](https://hub.fastgit.org//zdharma/zplugin#turbo-mode-zsh--53)** – **39-50% or more faster Zsh startup!**
   - Subcommand `update` can update snippets, via given URL (up to this point snippets were updated via
     `zplugin update --all`).
   - Completion management is enabled for snippets (not only plugins).
@@ -587,9 +587,9 @@ All notable changes to this project will be documented in this file.
 
     ```SystemVerilog
     % zplugin ice if"(( 0 ))"
-    % zplugin snippet --command https://github.com/b4b4r07/httpstat/blob/master/httpstat.sh
+    % zplugin snippet --command https://hub.fastgit.org//b4b4r07/httpstat/blob/master/httpstat.sh
     % zplugin ice if"(( 1 ))"
-    % zplugin snippet --command https://github.com/b4b4r07/httpstat/blob/master/httpstat.sh
+    % zplugin snippet --command https://hub.fastgit.org//b4b4r07/httpstat/blob/master/httpstat.sh
     Setting up snippet httpstat.sh
     Downloading httpstat.sh...
     ```

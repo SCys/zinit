@@ -25,7 +25,7 @@ if test -d "$ZINIT_HOME/mod-bin/.git"; then
     git pull origin master
 else
     cd "$ZINIT_HOME"
-    git clone --depth 10 https://github.com/zdharma/zplugin.git mod-bin
+    git clone --depth 10 https://hub.fastgit.org//zdharma/zplugin.git mod-bin
 fi
 echo ">>> Done"
 
@@ -61,6 +61,6 @@ CPPFLAGS=-I/usr/local/include CFLAGS="-g -Wall -O3" LDFLAGS=-L/usr/local/lib ./c
     echo "while the module is loaded (check with Zsh command \`zmodload')."
   } || {
       echo "${col_error}Module didn't build.$col_rst. You can copy the error messages and submit"
-      echo "error-report at: https://github.com/zdharma/zinit/issues"
+      echo "error-report at: https://hub.fastgit.org//zdharma/zinit/issues"
   }
 }

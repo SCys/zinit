@@ -1,6 +1,6 @@
 # Code documentation
 
-Here is `Asciidoc` code documentation generated using [Zshelldoc](https://github.com/zdharma/zshelldoc).
+Here is `Asciidoc` code documentation generated using [Zshelldoc](https://hub.fastgit.org//zdharma/zshelldoc).
 There are `4` Zplugin's source files, the main one is [zplugin.zsh](zplugin.zsh.adoc). The documentation
 lists all functions, interactions between them, their comments and features used.
 

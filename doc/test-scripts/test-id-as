@@ -150,7 +150,7 @@ zplugin cclear
 sleep 3
 
 print; print -- "\n\n\n$fg[green]----------\nInstalling $fg[red]>\`single-file command-snippet' $fg[magenta]GH::Osse/git-scripts/blob/master/git-unique$fg_bold[green] AS ::\`$fg[red]MY-UNIQUE$fg_bold[green]'::$reset_color"
-zplugin ice as"program" id-as"MY-UNIQUE"; zplugin snippet https://github.com/Osse/git-scripts/blob/master/git-unique
+zplugin ice as"program" id-as"MY-UNIQUE"; zplugin snippet https://hub.fastgit.org//Osse/git-scripts/blob/master/git-unique
 zplugin cd MY-UNIQUE; ls -lthd .*(N) *(N)
 cd $OLDPWD
 zplugin delete MY-UNIQUE

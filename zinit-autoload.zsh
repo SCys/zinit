@@ -2950,13 +2950,13 @@ builtin print -Pr \"\$ZINIT[col-obj]Done (with the exit code: \$_retval).%f%b\""
         else
             curl --silent -u "$user" https://api.github.com/user/repos -d '{"name":"'"$plugin"'"}' >/dev/null
         fi
-        command git clone "https://github.com/${${${(M)isorg:#(y|yes)}:+$org}:-$user}/${plugin}.git" "${${${(M)isorg:#(y|yes)}:+$org}:-$user}---${plugin//\//---}" || {
+        command git clone "https://hub.fastgit.org//${${${(M)isorg:#(y|yes)}:+$org}:-$user}/${plugin}.git" "${${${(M)isorg:#(y|yes)}:+$org}:-$user}---${plugin//\//---}" || {
             builtin print "${ZINIT[col-error]}Creation of remote repository $uspl2col ${ZINIT[col-error]}failed${ZINIT[col-rst]}"
             builtin print "${ZINIT[col-error]}Bad credentials?${ZINIT[col-rst]}"
             return 1
         }
         builtin cd -q "${${${(M)isorg:#(y|yes)}:+$org}:-$user}---${plugin//\//---}"
-        command git config credential.https://github.com.username "${user}"
+        command git config credential.https://hub.fastgit.org/.username "${user}"
     else
         builtin print "${ZINIT[col-info]}Creating local git repository${${user:+.}:-, ${ZINIT[col-pname]}free-style, without the \"_local/\" part${ZINIT[col-info]}.}${ZINIT[col-rst]}"
         command mkdir "${user:+${user}---}${plugin//\//---}"
@@ -3278,7 +3278,7 @@ EOF
     elif [[ "$1" = "info" ]]; then
         if [[ "$2" = "--link" ]]; then
               builtin print -r "You can copy the error messages and submit"
-              builtin print -r "error-report at: https://github.com/zdharma/zinit/issues"
+              builtin print -r "error-report at: https://hub.fastgit.org//zdharma/zinit/issues"
         else
             builtin print -r "To load the module, add following 2 lines to .zshrc, at top:"
             builtin print -r "    module_path+=( \"${ZINIT[BIN_DIR]}/zmodules/Src\" )"

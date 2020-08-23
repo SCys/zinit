@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**  *generated with [DocToc](https://hub.fastgit.org//thlorenz/doctoc)*
 
 - [2018-08-14, received $30](#2018-08-14-received-30)
 - [2018-08-03, received $8](#2018-08-03-received-8)
@@ -22,13 +22,13 @@ features, sometimes many days in a row.
 
 ## 2018-08-14, received $30
 
- * **Project**: **[Zplugin](https://github.com/zdharma/zplugin)**
+ * **Project**: **[Zplugin](https://hub.fastgit.org//zdharma/zplugin)**
  * **Goal**: Create a binary Zsh module with one Zplugin optimization and optionally some
    other features.
  * **Status**: The job is done.
 
 Thanks to this donation I have finally started to code **[binary Zplugin module](
-https://github.com/zdharma/zplugin#quick-start-module-only)**, which is a big step onward
+https://hub.fastgit.org//zdharma/zplugin#quick-start-module-only)**, which is a big step onward
 in evolution of Zplugin. I've implemented and published the module with 3 complete
 features: 1) `load` optimization, 2) autocompilation of scripts, 3) profiling of script
 load times.
@@ -58,7 +58,7 @@ Commit list:
 
 ## 2018-08-03, received $8
 
- * **Project**: **[zdharma/history-search-multi-word](https://github.com/zdharma/history-search-multi-word)**
+ * **Project**: **[zdharma/history-search-multi-word](https://hub.fastgit.org//zdharma/history-search-multi-word)**
  * **Goal**: Allow calling `zle reset-prompt` (Zshell feature).
  * **Status**: The job is done.
 
@@ -75,7 +75,7 @@ Commit list:
 
 ## 2018-08-02, received $3 from Patreon
 
- * **Project**: **[zdharma/fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)**
+ * **Project**: **[zdharma/fast-syntax-highlighting](https://hub.fastgit.org//zdharma/fast-syntax-highlighting)**
  * **Goal**: No goal set up.
  * **Status**: Bug-fixing work.
 
@@ -107,7 +107,7 @@ Commit list:
 
 ## 2018-07-31, received $7
 
- * **Project**: **[zdharma/fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)**
+ * **Project**: **[zdharma/fast-syntax-highlighting](https://hub.fastgit.org//zdharma/fast-syntax-highlighting)**
  * **Goal**: Implement ideal brackets highlighting.
  * **Status**: The job is done.
 
@@ -136,7 +136,7 @@ Commit list:
 
 ## 2018-07-28, received $2
 
- * **Project**: **[zdharma/fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)**
+ * **Project**: **[zdharma/fast-syntax-highlighting](https://hub.fastgit.org//zdharma/fast-syntax-highlighting)**
  * **Goal**: Distinguish file and directory when highlighting
  * **Status**: The job is done.
 
@@ -153,7 +153,7 @@ Commit list:
 
 ## 2018-07-25, received $3
 
- * **Project**: **[zdharma/zshelldoc](https://github.com/zdharma/zshelldoc)**
+ * **Project**: **[zdharma/zshelldoc](https://hub.fastgit.org//zdharma/zshelldoc)**
  * **Goal**: Implement documenting of used environment variables.
  * **Status**: The job is done.
 
@@ -177,7 +177,7 @@ Commit list:
 
 ## 2018-07-20, received $3
 
- * **Project**: **[zdharma/zshelldoc](https://github.com/zdharma/zshelldoc)**
+ * **Project**: **[zdharma/zshelldoc](https://hub.fastgit.org//zdharma/zshelldoc)**
  * **Goal**: Implement stripping of leading `#` char from functions' descriptions.
  * **Status**: The job is done.
 
@@ -192,7 +192,7 @@ Commit list:
 
 ## 2018-06-17, received ~$155 (200 CAD)
 
- * **Project**: **[zdharma/fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)**
+ * **Project**: **[zdharma/fast-syntax-highlighting](https://hub.fastgit.org//zdharma/fast-syntax-highlighting)**
  * **Goal**: No goal set up.
  * **Status**: Done intense research.
 
@@ -220,7 +220,7 @@ Commit list:
 
 ## 2018-06-10, received $10
 
- * **Project**: **[zdharma/fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)**
+ * **Project**: **[zdharma/fast-syntax-highlighting](https://hub.fastgit.org//zdharma/fast-syntax-highlighting)**
  * **Goal**: No goal set up.
  * **Status**: Done intense experimenting.
 
@@ -248,7 +248,7 @@ Commit list:
 
 ## 2018-05-25, received $50
 
- * **Project**: **[zdharma/fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)**
+ * **Project**: **[zdharma/fast-syntax-highlighting](https://hub.fastgit.org//zdharma/fast-syntax-highlighting)**
  * **Goal**: No goal set up.
  * **Status**: New ideas and features.
 

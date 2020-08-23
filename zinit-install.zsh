@@ -208,7 +208,7 @@ builtin source "${ZINIT[BIN_DIR]}/zinit-side.zsh" || { builtin print -P "${ZINIT
                     "${${${(MS)ICE[required]##(\;|(#s))$required(\;|(#e))}:+selected profile}:-package}" \
                     "${${${(MS)ICE[required]##(\;|(#s))$required(\;|(#e))}:+\`${ZINIT[col-pname]}$profile${ZINIT[col-error]}\'}:-\\b}" \
                     "requires ${namemap[$required]} annex." \
-                    "\nSee: %F{221}https://github.com/zinit-zsh/z-a-${(L)namemap[$required]}%f%b."
+                    "\nSee: %F{221}https://hub.fastgit.org//zinit-zsh/z-a-${(L)namemap[$required]}%f%b."
                 (( ${#profiles[@]:#$profile} > 0 )) && builtin print -r -- "Other available profiles are: ${(j:, :)${profiles[@]:#$profile}}."
                 return 1
             fi
@@ -312,17 +312,17 @@ builtin source "${ZINIT[BIN_DIR]}/zinit-side.zsh" || { builtin print -P "${ZINIT
 
     local -A sites
     sites=(
-        github    github.com
-        gh        github.com
-        bitbucket bitbucket.org
-        bb        bitbucket.org
-        gitlab    gitlab.com
-        gl        gitlab.com
-        notabug   notabug.org
-        nb        notabug.org
-        github-rel github.com/$remote_url_path/releases
-        gh-r      github.com/$remote_url_path/releases
-        cygwin    cygwin
+        github      hub.fastgit.org
+        gh          hub.fastgit.org
+        bitbucket   bitbucket.org
+        bb          bitbucket.org
+        gitlab      gitlab.com
+        gl          gitlab.com
+        notabug     notabug.org
+        nb          notabug.org
+        github-rel  hub.fastgit.org/$remote_url_path/releases
+        gh-r        hub.fastgit.org/$remote_url_path/releases
+        cygwin      cygwin
     )
 
     ZINIT[annex-multi-flag:pull-active]=${${${(M)update:#-u}:+${ZINIT[annex-multi-flag:pull-active]}}:-2}
@@ -367,7 +367,7 @@ builtin source "${ZINIT[BIN_DIR]}/zinit-side.zsh" || { builtin print -P "${ZINIT
 
                 for REPLY ( $reply ) {
                     count+=1
-                    url="https://github.com${REPLY}"
+                    url="https://hub.fastgit.org/${REPLY}"
                     if [[ -d $local_path/._zinit ]] {
                         { local old_version="$(<$local_path/._zinit/is_release${count:#1})"; } 2>/dev/null
                         old_version=${old_version/(#b)(\/[^\/]##)(#c4,4)\/([^\/]##)*/${match[2]}}
@@ -1318,7 +1318,7 @@ builtin source "${ZINIT[BIN_DIR]}/zinit-side.zsh" || { builtin print -P "${ZINIT
     } elif [[ -n ${ZINIT_SICE[$id_as]} ]] {
         +zinit-message "{error}WARNING:{msg2} Inconsistency #3" \
             "occurred, please report the string: \`{obj}${ZINIT_SICE[$id_as]}{msg2}' to the" \
-            "GitHub issues page: {obj}https://github.com/zdharma/zinit/issues/{msg2}.{rst}"
+            "GitHub issues page: {obj}https://hub.fastgit.org//zdharma/zinit/issues/{msg2}.{rst}"
     }
     id_as=${ICE[id-as]:-$id_as}
 
@@ -1381,7 +1381,7 @@ builtin source "${ZINIT[BIN_DIR]}/zinit-side.zsh" || { builtin print -P "${ZINIT
     local user=$1 plugin=$2 urlpart=$3
 
     if [[ -z $urlpart ]] {
-        local url=https://github.com/$user/$plugin/releases/$ICE[ver]
+        local url=https://hub.fastgit.org//$user/$plugin/releases/$ICE[ver]
     } else {
         local url=https://$urlpart
     }

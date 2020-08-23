@@ -103,12 +103,12 @@ ZINIT[SHADOWING]=inactive   ZINIT[DTRACE]=0    ZINIT[CUR_PLUGIN]=
 # Parameters - ICE [[[
 declare -gA ZINIT_1MAP ZINIT_2MAP
 ZINIT_1MAP=(
-    OMZ:: https://github.com/ohmyzsh/ohmyzsh/trunk/
-    OMZP:: https://github.com/ohmyzsh/ohmyzsh/trunk/plugins/
-    OMZT:: https://github.com/ohmyzsh/ohmyzsh/trunk/themes/
-    OMZL:: https://github.com/ohmyzsh/ohmyzsh/trunk/lib/
-    PZT:: https://github.com/sorin-ionescu/prezto/trunk/
-    PZTM:: https://github.com/sorin-ionescu/prezto/trunk/modules/
+    OMZ:: https://hub.fastgit.org//ohmyzsh/ohmyzsh/trunk/
+    OMZP:: https://hub.fastgit.org//ohmyzsh/ohmyzsh/trunk/plugins/
+    OMZT:: https://hub.fastgit.org//ohmyzsh/ohmyzsh/trunk/themes/
+    OMZL:: https://hub.fastgit.org//ohmyzsh/ohmyzsh/trunk/lib/
+    PZT:: https://hub.fastgit.org//sorin-ionescu/prezto/trunk/
+    PZTM:: https://hub.fastgit.org//sorin-ionescu/prezto/trunk/modules/
 )
 ZINIT_2MAP=(
     OMZ:: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/
@@ -762,7 +762,7 @@ builtin setopt noaliases
             shift
             continue
         else
-            [[ -z ${ZINIT_SNIPPETS[PZT::modules/$1${ICE[svn]-/init.zsh}]} && -z ${ZINIT_SNIPPETS[https://github.com/sorin-ionescu/prezto/trunk/modules/$1${ICE[svn]-/init.zsh}]} ]] && .zinit-load-snippet PZT::modules/"$1${ICE[svn]-/init.zsh}"
+            [[ -z ${ZINIT_SNIPPETS[PZT::modules/$1${ICE[svn]-/init.zsh}]} && -z ${ZINIT_SNIPPETS[https://hub.fastgit.org//sorin-ionescu/prezto/trunk/modules/$1${ICE[svn]-/init.zsh}]} ]] && .zinit-load-snippet PZT::modules/"$1${ICE[svn]-/init.zsh}"
             shift
         fi
     done
@@ -1355,7 +1355,7 @@ builtin setopt noaliases
         if [[ -f ${list[1-correct]} ]] {
             ZERO="${list[1-correct]}"
             (( ${+ICE[silent]} )) && { { [[ -n $precm ]] && { builtin ${precm[@]} 'source "$ZERO"'; ((1)); } || { ((1)); builtin source "$ZERO"; }; } 2>/dev/null 1>&2; (( retval += $? )); ((1)); } || { ((1)); { [[ -n $precm ]] && { builtin ${precm[@]} 'source "$ZERO"'; ((1)); } || { ((1)); builtin source "$ZERO"; }; }; (( retval += $? )); }
-            (( 0 == retval )) && [[ $url = PZT::* || $url = https://github.com/sorin-ionescu/prezto/* ]] && zstyle ":prezto:module:${${id_as%/init.zsh}:t}" loaded 'yes'
+            (( 0 == retval )) && [[ $url = PZT::* || $url = https://hub.fastgit.org//sorin-ionescu/prezto/* ]] && zstyle ":prezto:module:${${id_as%/init.zsh}:t}" loaded 'yes'
         } else { [[ ${+ICE[silent]} -eq 1 || ${+ICE[pick]} -eq 1 && -z ${ICE[pick]} || ${ICE[pick]} = /dev/null ]] || { +zinit-message "Snippet not loaded ({info2}${id_as}{rst})"; retval=1; } }
 
         [[ -n ${ICE[src]} ]] && { ZERO="${${(M)ICE[src]##/*}:-$local_dir/$dirname/${ICE[src]}}"; (( ${+ICE[silent]} )) && { { [[ -n $precm ]] && { builtin ${precm[@]} 'source "$ZERO"'; ((1)); } || { ((1)); builtin source "$ZERO"; }; } 2>/dev/null 1>&2; (( retval += $? )); ((1)); } || { ((1)); { [[ -n $precm ]] && { builtin ${precm[@]} 'source "$ZERO"'; ((1)); } || { ((1)); builtin source "$ZERO"; }; }; (( retval += $? )); }; }
@@ -2327,7 +2327,7 @@ env-whitelist|bindkeys|module|add-fpath|fpath|run${reply:+|${(~j:|:)"${reply[@]#
 
                     # Strip the ID-qualifier (`@') and GitHub domain from the ID.
                     ___id="${${1#@}%%(///|//|/)}"
-                    (( ___is_snippet == -1 )) && ___id="${___id#https://github.com/}"
+                    (( ___is_snippet == -1 )) && ___id="${___id#https://hub.fastgit.org//}"
 
                     # Effective handle-ID – the label under which the object
                     # will be identified / referred-to by Zinit.
@@ -2391,7 +2391,7 @@ env-whitelist|bindkeys|module|add-fpath|fpath|run${reply:+|${(~j:|:)"${reply[@]#
                                             +zinit-message "{warn}Warning:{msg} Bad new-ices returned" \
                                                 "from the annex{ehi}:{rst} {meta}${___arr[3]}{msg}," \
                                                 "please file an issue report at:{url}" \
-                                    "https://github.com/zinit-zsh/${___arr[3]}/issues/new{msg}.{rst}"
+                                    "https://hub.fastgit.org//zinit-zsh/${___arr[3]}/issues/new{msg}.{rst}"
                                             ___ices=(  ) ___retval+=7
                                         }
                             }

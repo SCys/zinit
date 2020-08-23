@@ -7,7 +7,7 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**  *generated with [DocToc](https://hub.fastgit.org//thlorenz/doctoc)*
 
 - [News](#news)
 - [Zinit](#zinit)
@@ -42,7 +42,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <p align="center">
-<a href="https://github.com/zdharma/zinit">
+<a href="https://hub.fastgit.org//zdharma/zinit">
 <img src="https://raw.githubusercontent.com/zdharma/zinit/images/zinit.png"/>
 </a>
 </p>
@@ -65,7 +65,7 @@
         zi as"null" sbin"vims" for MilesCranmer/vim-stream
     .
 
-  - A **new annex** [**Unscope**](https://github.com/zinit-zsh/z-a-unscope) :)
+  - A **new annex** [**Unscope**](https://hub.fastgit.org//zinit-zsh/z-a-unscope) :)
     It's goal is: to allow the usage of the unscoped — i.e.: given without any
     GitHub user name — plugin IDs. Basically it allows to specify, e.g.: **zinit load 
     _zsh-syntax-highlighting_** instead of **zinit load
@@ -87,8 +87,8 @@
     nicer snippet IDs in the installation and update messages, **f)** the
     annexes can be now loaded in any order without influencing their operation
     in any way (there have been some issues with
-    [Patch-Dl](https://github.com/zinit-zsh/z-a-patch-dl) and
-    [As-Monitor](https://github.com/zinit-zsh/z-a-as-monitor) annexes), **g)**
+    [Patch-Dl](https://hub.fastgit.org//zinit-zsh/z-a-patch-dl) and
+    [As-Monitor](https://hub.fastgit.org//zinit-zsh/z-a-as-monitor) annexes), **g)**
     `compile''` can now obtain multiple patterns separated via semicolon (`;`).
 
 * 25-06-2020
@@ -108,7 +108,7 @@
     ```
 
 * 20-06-2020
-  - The [Bin-Gem-Node](https://github.com/zinit-zsh/z-a-bin-gem-node) annex now
+  - The [Bin-Gem-Node](https://hub.fastgit.org//zinit-zsh/z-a-bin-gem-node) annex now
     has an explicit Cygwin support — it creates additional, **extra shim files**
     — Windows batch scripts that allow to run the shielded applications from
     e.g.: Windows run dialog — if the `~/.zinit/polaris/bin` directory is being
@@ -167,7 +167,7 @@
   - `ziextract` and `extract''` now support Windows installers — currently the
     installer of Firefox. Let me know if any of your installers doesn't work.
     You can test the installer with the Firefox Developer Edition Zinit
-    [package](https://github.com/Zsh-Packages/firefox-dev):
+    [package](https://hub.fastgit.org//Zsh-Packages/firefox-dev):
 
     ```zsh
     zinit pack"bgn" for firefox-dev
@@ -182,8 +182,8 @@
     --move2 --auto` there will be the two files moved to the top level dir:
     `./{pulumi,pulumi2}`. To obtain the same effect using the `extract''` ice,
     pass two exclamation marks, i.e.: `extract'!!'`. A real-world example — it
-    uses [z-a-as-monitor](https://github.com/zinit-zsh/z-a-as-monitor) and
-    [z-a-bin-gem-node](https://github.com/zinit-zsh/z-a-bin-gem-node) annexes to
+    uses [z-a-as-monitor](https://hub.fastgit.org//zinit-zsh/z-a-as-monitor) and
+    [z-a-bin-gem-node](https://hub.fastgit.org//zinit-zsh/z-a-bin-gem-node) annexes to
     download a Zip package that has the files inside two-level nested directory
     tree:
 
@@ -217,7 +217,7 @@
   - A new feature — ability to substitute `stringA` → `stringB` in plugin source
     body before executing by `subst'A -> B'`. Works also for any nested `source`
     commands. Example — renaming the `dl''` ice into a `dload''` ice in the
-    [Patch-Dl](https://github.com/zinit-zsh/z-a-patch-dl) annex:
+    [Patch-Dl](https://hub.fastgit.org//zinit-zsh/z-a-patch-dl) annex:
 
     ```zsh
     zinit subst"dl'' -> dload''" for zinit-zsh/z-a-patch-dl
@@ -332,7 +332,7 @@
     i.e.: `atinit'!…'`.
 
 * 01-04-2020
-  - As a user [noticed](https://github.com/zdharma/zinit/issues/293), Subversion
+  - As a user [noticed](https://hub.fastgit.org//zdharma/zinit/issues/293), Subversion
     isn't distributed with Xcode Command Line Tools anymore. Here's a [helpful
     snippet](https://www.reddit.com/r/zinit/wiki/gallery#wiki_building_and_installation_of_subversion)
     that installs Subversion with use of Zinit.
@@ -416,12 +416,12 @@
   - A few tips for the project rename following the field reports (the issues created
     by users):
     - the `ZPLGM` hash is now `ZINIT`,
-    - the annexes are moved under [zinit-zsh](https://github.com/zinit-zsh)
+    - the annexes are moved under [zinit-zsh](https://hub.fastgit.org//zinit-zsh)
       organization.
 
 * 19-01-2020
   - The name has been changed to **Zinit** based on the results of the
-    [poll](https://github.com/zdharma/zinit/issues/235).
+    [poll](https://hub.fastgit.org//zdharma/zinit/issues/235).
   - In general, you don't have to do anything after the name change.
   - Only a run of `zinit update --all` might be necessary.
   - You might also want to rename your `zplugin` calls in `zshrc` to `zinit`.
@@ -432,7 +432,7 @@
   - There's a new function, `ziextract`, which unpacks the given file. It supports many
     formats (notably also `dmg` images) — if there's a format that's unsupported please
     don't hesitate to [make a
-    request](https://github.com/zdharma/zinit/issues/new?template=feature_request.md)
+    request](https://hub.fastgit.org//zdharma/zinit/issues/new?template=feature_request.md)
     for it to be added. A few facts:
     - the function is available only at the time of the plugin/snippet installation,
     - it's to be used within `atclone` and `atpull` ices,
@@ -441,7 +441,7 @@
     - one other option `--norm` prevents the archive from being deleted upon unpacking.
   - snippets now aren't re-downloaded unless they're newer on the HTTP server; use
     this with the `--norm` option of `ziextract` to prevent unnecessary updates; for
-    example, the [firefox-dev package](https://github.com/Zsh-Packages/firefox-dev)
+    example, the [firefox-dev package](https://hub.fastgit.org//Zsh-Packages/firefox-dev)
     uses this option for this purpose,
   - GitHub doesn't report proper `Last-Modified` HTTP server for the files in the
     repositories so the feature doesn't yet work with such files.
@@ -450,8 +450,8 @@
   - The packages have been disconnected from NPM registry and now live only on Zsh
     Packages organization. Publishing to NPM isn't needed.
   - There are two interesting packages,
-    [any-gem](https://github.com/Zsh-Packages/any-gem) and
-    [any-node](https://github.com/Zsh-Packages/any-node). They allow to install any
+    [any-gem](https://hub.fastgit.org//Zsh-Packages/any-gem) and
+    [any-node](https://hub.fastgit.org//Zsh-Packages/any-node). They allow to install any
     Gem(s) or Node module(s) locally in a newly created plugin directory. For example:
 
     ```zsh
@@ -464,7 +464,7 @@
     ```
 
     The binaries will be exposed without altering the PATH via shims
-    ([Bin-Gem-Node](https://github.com/zinit-zsh/z-a-bin-gem-node) annex is needed).
+    ([Bin-Gem-Node](https://hub.fastgit.org//zinit-zsh/z-a-bin-gem-node) annex is needed).
     Shims are correctly removed when deleting a plugin with `zinit delete …`.
 
 * 11-12-2019
@@ -498,7 +498,7 @@
     ```
 
     i.e.: precede the plugin name with `@`. Note: `sbin''` is an ice added by the
-    [z-a-bin-gem-node](https://github.com/zinit/z-a-bin-gem-node) annex, it provides
+    [z-a-bin-gem-node](https://hub.fastgit.org//zinit/z-a-bin-gem-node) annex, it provides
     the command to the command line without altering `$PATH`.
 
     See the [Zinit Wiki](http://zdharma.org/zinit/wiki/For-Syntax/) for more
@@ -586,7 +586,7 @@
 * 14-09-2019
   - There's a Vim plugin which extends syntax highlighting of zsh scripts with coloring
     of the Zinit commands. [Project
-    homepage](https://github.com/zinit/zinit-vim-syntax).
+    homepage](https://hub.fastgit.org//zinit/zinit-vim-syntax).
 
 * 13-09-2019
   - New ice `aliases` which loads plugin with the aliases mechanism enabled. Use for
@@ -618,18 +618,18 @@
   - Three new Zinit annexes (i.e.
     [extensions](http://zdharma.org/zinit/wiki/Annexes/)):
 
-      - [z-a-man](https://github.com/zinit/z-a-man)
+      - [z-a-man](https://hub.fastgit.org//zinit/z-a-man)
 
         Generates man pages and code-documentation man pages from plugin's README.md
         and source files (the code documentation is obtained from
-        [Zshelldoc](https://github.com/zdharma/zshelldoc)).
+        [Zshelldoc](https://hub.fastgit.org//zdharma/zshelldoc)).
 
-      - [z-a-test](https://github.com/zinit/z-a-test)
+      - [z-a-test](https://hub.fastgit.org//zinit/z-a-test)
 
         Runs tests (if detected `test` target in a `Makefile` or any `*.zunit` files)
         on plugin installation and non-empty update.
 
-      - [z-a-patch-dl](https://github.com/zinit/z-a-patch-dl)
+      - [z-a-patch-dl](https://hub.fastgit.org//zinit/z-a-patch-dl)
 
         Allows easy download and applying of patches, to e.g. aid building a binary
         program equipped in the plugin.
@@ -645,7 +645,7 @@ To see the full history check [the changelog](doc/CHANGELOG.md).
 # Zinit
 
 <p align="center">
-<a href="https://github.com/zdharma/pm-perf-test">
+<a href="https://hub.fastgit.org//zdharma/pm-perf-test">
 <img width="550px" src="https://raw.githubusercontent.com/zdharma/zinit/images/startup-times.png"/>
 </a>
 </p>
@@ -656,7 +656,7 @@ install everything from GitHub and other sites. Its characteristics are:
 1. Zinit is currently the only plugin manager out there that provides Turbo mode
    which yields **50-80% faster Zsh startup** (i.e.: the shell will start up to
    **5** times faster!). Check out a speed comparison with other popular plugin
-   managers [here](https://github.com/zdharma/pm-perf-test).
+   managers [here](https://hub.fastgit.org//zdharma/pm-perf-test).
 
 2. The plugin manager gives **reports** from plugin loadings describing what
    **aliases**, functions, **bindkeys**, Zle widgets, zstyles, **completions**,
@@ -680,16 +680,16 @@ install everything from GitHub and other sites. Its characteristics are:
 
 6. Zinit supports special, dedicated **packages** that offload the user from
    providing long and complex commands. See the
-   [Zsh-Packages](https://github.com/Zsh-Packages) organization for a growing,
+   [Zsh-Packages](https://hub.fastgit.org//Zsh-Packages) organization for a growing,
    complete list of Zinit packages and the [Wiki
    page](https://zdharma.org/zinit/wiki/Zinit-Packages/) for an article about
    the feature.
 
 7. Also, specialized Zinit extensions — called **annexes** — allow to extend the
    plugin manager with new commands, URL-preprocessors (used by e.g.:
-   [z-a-as-monitor](https://github.com/zinit-zsh/z-a-as-monitor) annex),
+   [z-a-as-monitor](https://hub.fastgit.org//zinit-zsh/z-a-as-monitor) annex),
    post-install and post-update hooks and much more. See the
-   [zinit-zsh](https://github.com/zinit-zsh) organization for a growing,
+   [zinit-zsh](https://hub.fastgit.org//zinit-zsh) organization for a growing,
    complete list of available Zinit extensions and refer to the [Wiki
    article](https://zdharma.org/zinit/wiki/Annexes/) for an introduction on
    creating your own annex.
@@ -722,7 +722,7 @@ To manually install Zinit clone the repo to e.g. `~/.zinit/bin`:
 
 ```sh
 mkdir ~/.zinit
-git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
+git clone https://hub.fastgit.org//zdharma/zinit.git ~/.zinit/bin
 ```
 
 and source it from `.zshrc` (above compinit):
@@ -807,7 +807,7 @@ zinit creinstall %HOME/my_completions
 
 ```zsh
 # For GNU ls (the binaries can be gls, gdircolors, e.g. on OS X when installing the
-# coreutils package from Homebrew; you can also use https://github.com/ogham/exa)
+# coreutils package from Homebrew; you can also use https://hub.fastgit.org//ogham/exa)
 zinit ice atclone"dircolors -b LS_COLORS > c.zsh" atpull'%atclone' pick"c.zsh" nocompile'!'
 zinit light trapd00r/LS_COLORS
 ```
@@ -821,9 +821,9 @@ zinit light direnv/direnv
 [You can see an extended explanation of direnv in the Wiki.](http://zdharma.org/zinit/wiki/Direnv-explanation/)
 
 If you're interested in more examples then check out the [zinit-configs
-repository](https://github.com/zdharma/zinit-configs) where users have uploaded their
+repository](https://hub.fastgit.org//zdharma/zinit-configs) where users have uploaded their
 `~/.zshrc` and Zinit configurations. Feel free to
-[submit](https://github.com/zdharma/zinit-configs/issues/new?template=request-to-add-zshrc-to-the-zinit-configs-repo.md)
+[submit](https://hub.fastgit.org//zdharma/zinit-configs/issues/new?template=request-to-add-zshrc-to-the-zinit-configs-repo.md)
 your `~/.zshrc` there if it contains Zinit commands.
 
 You can also check out the [Gallery of Zinit
@@ -923,7 +923,7 @@ explicitly stated otherwise.
 | [**`id-as`**](http://zdharma.org/zinit/wiki/id-as/) |<div align="justify" style="text-align: justify;">Nickname a plugin or snippet, to e.g. create a short handler for long-url snippet.</div>|
 | `compile` |<div align="justify" style="text-align: justify;">Pattern (+ possible `{...}` expansion, like `{a/*,b*}`) to select additional files to compile, e.g. `compile"(pure\|async).zsh"` for `sindresorhus/pure`.</div> |
 | `nocompile` |<div align="justify" style="text-align: justify;">Don't try to compile `pick`-pointed files. If passed the exclamation mark (i.e. `nocompile'!'`), then do compile, but after `make''` and `atclone''` (useful if Makefile installs some scripts, to point `pick''` at the location of their installation).</div>|
-| `service` |<div align="justify" style="text-align: justify;">Make following plugin or snippet a *service*, which will be ran in background, and only in single Zshell instance. See [zservices-organization](https://github.com/zservices) page.</div>|
+| `service` |<div align="justify" style="text-align: justify;">Make following plugin or snippet a *service*, which will be ran in background, and only in single Zshell instance. See [zservices-organization](https://hub.fastgit.org//zservices) page.</div>|
 | `reset-prompt` |<div align="justify" style="text-align: justify;">Reset the prompt after loading the plugin/snippet (by issuing `zle .reset-prompt`). Note: normally it's sufficient to precede the value of `wait''` ice with `!`.</div>|
 | `bindmap` |<div align="justify" style="text-align: justify;">To hold `;`-separated strings like `Key(s)A -> Key(s)B`, e.g. `^R -> ^T; ^A -> ^B`. In general, `bindmap''`changes bindings (done with the `bindkey` builtin) the plugin does. The example would cause the plugin to map Ctrl-T instead of Ctrl-R, and Ctrl-B instead of Ctrl-A. **Does not work with snippets.**</div>|
 | `trackbinds` |<div align="justify" style="text-align: justify;">Shadow but only `bindkey` calls even with `zinit light ...`, i.e. even with investigating disabled (fast loading), to allow `bindmap` to remap the key-binds. The same effect has `zinit light -b ...`, i.e. additional `-b` option to the `light`-subcommand. **Does not work with snippets.**</div>|
@@ -1155,8 +1155,8 @@ Performance gains are huge, example shell startup time with double `compinit`: *
 
 If you load completions using `wait''` Turbo mode then you can add
 `atinit'zicompinit'` to syntax-highlighting plugin (which should be the last
-one loaded, as their (2 projects, [z-sy-h](https://github.com/zsh-users/zsh-syntax-highlighting) &
-[f-sy-h](https://github.com/zdharma/fast-syntax-highlighting))
+one loaded, as their (2 projects, [z-sy-h](https://hub.fastgit.org//zsh-users/zsh-syntax-highlighting) &
+[f-sy-h](https://hub.fastgit.org//zdharma/fast-syntax-highlighting))
  documentation state), or `atload'zicompinit'` to last
 completion-related plugin. `zicompinit` is a function that just runs `autoload
 compinit; compinit`, created for convenience. There's also `zicdreplay` which
@@ -1320,7 +1320,7 @@ Zinit has many benefits:
 
 Below is a configuration that adds multiple git extensions, loaded in Turbo mode,
 1 second after prompt, with use of the
-[Bin-Gem-Node](https://github.com/zinit-zsh/z-a-bin-gem-node) annex:
+[Bin-Gem-Node](https://hub.fastgit.org//zinit-zsh/z-a-bin-gem-node) annex:
 
 ```zsh
 zinit as"null" wait"1" lucid for \
@@ -1356,7 +1356,7 @@ Do you need help or wish to get in touch with other Zinit users?
 [MIT-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [MIT-link]: ./LICENSE
 [ver-badge]: https://img.shields.io/github/tag/zdharma/zinit.svg
-[ver-link]: https://github.com/zdharma/zinit/releases
+[ver-link]: https://hub.fastgit.org//zdharma/zinit/releases
 [act-badge]: https://img.shields.io/github/commit-activity/y/zdharma/zinit.svg
 [gitter-badge]: https://badges.gitter.im/zdharma/zinit.svg
 [gitter-link]: https://gitter.im/zdharma/zinit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
